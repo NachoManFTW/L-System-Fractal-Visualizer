@@ -1,0 +1,12 @@
+# L-System: Dragon Curve
+axiom: FX
+angle: 90
+iterations: 12
+step: 8
+
+# production rules
+X -> X+YF+
+Y -> -FX-Y
+
+
+

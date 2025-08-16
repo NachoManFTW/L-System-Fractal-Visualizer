@@ -1,0 +1,41 @@
+MVP (2 weeks)
+------------------
+An interactive L-System visualizer. It consists of 5 core modules
+	1.Input manager to load and parse preset files
+	2.LSystem to expand the axiom using production rules over multiple iterations
+	3.TurtleInterpreter to convert the expanded string into drawable line segments using stack based turtle graphics
+	4.SFMLRenderer to render those segments with pan and zoom controls
+	5.Application to tie everything together and handle window events 
+
+Supports loading presets like plant.txt, dragon_curve.txt
+Include hot reloading via key press
+Zoomable 
+
+Milestone 1 Preset Parsing (2-3 days)
+	Load plant.txt and dragon_curve.txt from presets
+	Parse axiom, angle, interation, stpe, and rules
+	Log parsed data to console for verification
+
+Milestone 2 L-System Expansion (2-3 days)
+	Expand axiom using rules for N iterations
+	Output final string length and sample preview
+	Optimize for performance (avoid string copies)
+
+Milestone 3 Turtle Interpretation (2-3 days)
+	Walk the expanded string
+	Use a stack to handle [and] (position/orienation)
+	Generate std::vector<sf::Vertex> for line segments
+
+Milestone 4 SFML Rendering (2-3 days)
+	Draw lines to window using sf::VertexArray
+	Implement pan (arrow keys) and  zoom (mouse wheel)
+	Auto-center drawing on load
+
+Milestone 5 Hot Reloading (2 days)
+	Press a key (R) to reload current preset
+	Reparse, re-exoand, and re-render instantly
+
+Visual Output Goal
+	Render the Fractal Plant and Dragon Curve with correct angles and branching
+	Smooth zoome and pan to explore details
+	Crisp lines with adjustable step size and iteration count 
